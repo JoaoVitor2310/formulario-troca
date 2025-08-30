@@ -22,7 +22,7 @@
         <flux:navlist>
             <flux:navlist.group :heading="__('Formulário de troca')" class="grid">
                 <flux:navlist.item icon="device-phone-mobile" :href="route('device_types.index')"
-                    :current="request()->routeIs('device_types.index')" wire:navigate>{{ __('Aparelhos') }}</flux:navlist.item>
+                    :current="request()->routeIs('devices.*', 'device_types.*', 'device_variants.*')" wire:navigate>{{ __('Dispositivos') }}</flux:navlist.item>
             </flux:navlist.group>
         </flux:navlist>
 

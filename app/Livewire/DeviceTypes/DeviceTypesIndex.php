@@ -4,7 +4,7 @@ namespace App\Livewire\DeviceTypes;
 
 use Livewire\Component;
 
-class Index extends Component
+class DeviceTypesIndex extends Component
 {
     public $device_types = [];
 
@@ -68,10 +68,10 @@ class Index extends Component
         return view('livewire.device_types.index');
     }
 
-    public function selectDeviceType($categoryId)
+    public function selectDeviceType($deviceTypeId)
     {
         // Redirecionar para a página da categoria específica
-        return $this->redirect(route('device_types.show', $categoryId), navigate: true);
+        return $this->redirect(route('devices.index', $deviceTypeId), navigate: true);
     }
 
     public function createDevice($categoryId)
